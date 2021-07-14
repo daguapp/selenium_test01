@@ -1,0 +1,41 @@
+[ {
+  "uid" : "953328bc136432f6",
+  "name" : "test_01_login[case1]",
+  "time" : {
+    "start" : 1625220022378,
+    "stop" : 1625220027329,
+    "duration" : 4951
+  },
+  "status" : "broken",
+  "severity" : "normal"
+}, {
+  "uid" : "f0007b92ede6d98b",
+  "name" : "test_01_login[case2]",
+  "time" : {
+    "start" : 1625220029769,
+    "stop" : 1625220033883,
+    "duration" : 4114
+  },
+  "status" : "broken",
+  "severity" : "normal"
+}, {
+  "uid" : "1b3842a0aa686785",
+  "name" : "test_01_login[case0]",
+  "time" : {
+    "start" : 1625220015696,
+    "stop" : 1625220019935,
+    "duration" : 4239
+  },
+  "status" : "broken",
+  "severity" : "normal"
+}, {
+  "uid" : "e0cf5234c49aec0e",
+  "name" : "test_02_brand_analyse",
+  "time" : {
+    "start" : 1625220036198,
+    "stop" : 1625220036198,
+    "duration" : 0
+  },
+  "status" : "broken",
+  "severity" : "normal"
+} ]

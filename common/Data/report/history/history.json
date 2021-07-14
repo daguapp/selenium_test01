@@ -1,0 +1,82 @@
+{
+  "797dc79d9872fd3b045a5a4e4869723a" : {
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 1,
+      "skipped" : 0,
+      "passed" : 0,
+      "unknown" : 0,
+      "total" : 1
+    },
+    "items" : [ {
+      "uid" : "1b3842a0aa686785",
+      "status" : "broken",
+      "statusDetails" : "selenium.common.exceptions.InvalidArgumentException: Message: invalid argument: 'using' must be a string\n  (Session info: chrome=91.0.4472.124)",
+      "time" : {
+        "start" : 1625220015696,
+        "stop" : 1625220019935,
+        "duration" : 4239
+      }
+    } ]
+  },
+  "0a4e2b5ac2c09b6a2acf2e547c26199b" : {
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 1,
+      "skipped" : 0,
+      "passed" : 0,
+      "unknown" : 0,
+      "total" : 1
+    },
+    "items" : [ {
+      "uid" : "953328bc136432f6",
+      "status" : "broken",
+      "statusDetails" : "selenium.common.exceptions.InvalidArgumentException: Message: invalid argument: 'using' must be a string\n  (Session info: chrome=91.0.4472.124)",
+      "time" : {
+        "start" : 1625220022378,
+        "stop" : 1625220027329,
+        "duration" : 4951
+      }
+    } ]
+  },
+  "3b0a888247e58f399f22c8aedb81a95e" : {
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 1,
+      "skipped" : 0,
+      "passed" : 0,
+      "unknown" : 0,
+      "total" : 1
+    },
+    "items" : [ {
+      "uid" : "f0007b92ede6d98b",
+      "status" : "broken",
+      "statusDetails" : "selenium.common.exceptions.InvalidArgumentException: Message: invalid argument: 'using' must be a string\n  (Session info: chrome=91.0.4472.124)",
+      "time" : {
+        "start" : 1625220029769,
+        "stop" : 1625220033883,
+        "duration" : 4114
+      }
+    } ]
+  },
+  "9df987eaf33e745456a68beeb2c3b436" : {
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 1,
+      "skipped" : 0,
+      "passed" : 0,
+      "unknown" : 0,
+      "total" : 1
+    },
+    "items" : [ {
+      "uid" : "e0cf5234c49aec0e",
+      "status" : "broken",
+      "statusDetails" : "TypeError: test_01_login() got an unexpected keyword argument 'username'",
+      "time" : {
+        "start" : 1625220036198,
+        "stop" : 1625220036198,
+        "duration" : 0
+      }
+    } ]
+  }
+}

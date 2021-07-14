@@ -1,0 +1,57 @@
+{
+  "uid" : "b1a8273437954620fa374b796ffaacdd",
+  "name" : "behaviors",
+  "children" : [ {
+    "name" : "test_01_login[case0]",
+    "uid" : "1b3842a0aa686785",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "broken",
+    "time" : {
+      "start" : 1625220015696,
+      "stop" : 1625220019935,
+      "duration" : 4239
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "parameters" : [ "[1, '正确密码和错误密码，提示密码错误', 123456, 1234567, None, None, None]" ]
+  }, {
+    "name" : "test_01_login[case1]",
+    "uid" : "953328bc136432f6",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "broken",
+    "time" : {
+      "start" : 1625220022378,
+      "stop" : 1625220027329,
+      "duration" : 4951
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "parameters" : [ "[2, '正确用户名和错误密码，提示用户名错误', 1234567, 12345678, None, None, None]" ]
+  }, {
+    "name" : "test_01_login[case2]",
+    "uid" : "f0007b92ede6d98b",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "broken",
+    "time" : {
+      "start" : 1625220029769,
+      "stop" : 1625220033883,
+      "duration" : 4114
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "parameters" : [ "[3, '错误的用户和正确的密码，提示密码错误', 12345678, 123456789, None, None, None]" ]
+  }, {
+    "name" : "test_02_brand_analyse",
+    "uid" : "e0cf5234c49aec0e",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "broken",
+    "time" : {
+      "start" : 1625220036198,
+      "stop" : 1625220036198,
+      "duration" : 0
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "parameters" : [ ]
+  } ]
+}
