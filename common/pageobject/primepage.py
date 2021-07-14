@@ -23,14 +23,9 @@ class PrimePage(BasePage):
     recent_day=(By.XPATH,'//*[@id="ice-container"]/div/div[2]/div/div[5]/div/div/div/div[3]/div[1]/div[2]/div[1]/div[1]/div/label[2]/span[2]') #近七天数据
     thirty_day=(By.XPATH,'//*[@id="ice-container"]/div/div[2]/div/div[5]/div/div/div/div[3]/div[1]/div[2]/div[1]/div[1]/div/label[3]/span[2]')
 
-def test_yesterday_data(self):
-    self.get_url(self.prime_url)
-    self.click_ele(self.yesterday_gmv)
-    actual_result=self.locate_element_text('//*[@id="ice-container"]/div/div[2]/div/div[1]/div[1]/div/div[2]/div/div/div[1]/div[1]/span[1]')#实际结果
-    assert actual_result =="销售额"
+#点击
+def click_yesterday_gmv(self,*args):
+    self.click_ele(*args)
 
-def test_brand_data(self):
-    self.get_url(self.prime_url)
-    self.click_ele(self.brand_select)
-    self.move_ele()
+
 
