@@ -23,7 +23,7 @@ class ShopAnalayse(BasePage):
         try:
             ele=self.locate_element(*self.shop_detail_cancel_btn).click()
         except:
-            print("店铺ID:%s不存在"%(shop_id))
+            print("该店铺不存在")
         finally:
             actual_res= self.locate_element(*self.shop_txt).text
             print(actual_res)
