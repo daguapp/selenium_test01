@@ -1,4 +1,5 @@
 from time import sleep
+import allure
 import pytest
 import os
 from ddt import ddt,data,unpack,file_data
@@ -9,7 +10,6 @@ from common.pageobject.shop_analayse import ShopAnalayse
 from common.pageobject.brand_analayse import  BrandPage
 from common.pageobject.login import LoginPage
 #导入写好的各页面元素定位及操作流程模块
-@ddt
 class TestFangZhou:
 
     #打开浏览器
@@ -34,15 +34,23 @@ class TestFangZhou:
 
     #
     # def test_02_brand_analyse(self):
-    #     bs=BrandPage(self.driver)
+    #     bs=BrandPage(self.driver
     #     bs.brand_search()
-
-    @pytest.mark.parametrize("name",[257738004,394291029,181454546])
+    @pytest.mark.test
+    @pytest.mark.parametrize("name",[(257738004,"李宁泰海专卖店"),(394291029,"沃尔普大家电专营店"),(181454546,"晨光正强专卖店"),(17212121,"测试店铺")])
     def test_03_shop_search(self,name):
+        """店铺搜索功能"""
+        shop_id,shop_name=name
         ss=ShopAnalayse(self.driver)
-        ss.click_shop_analayse_btn(name)
+        ss.click_shop_analayse_btn(shop_id=shop_id,shop_name=shop_name)
 if __name__ == '__main__':
     pytest.main()
+    os.system("allure generate ./temp -o ./report --clean")
+
+#pytest [测试文件] -s -q --alluredir=./result --clean-alluredir
+
+#--alluredir这个选项，用于指定存储测试结果的路径
+#--clean-alluredir 这个选项用来清除之前生成的结果
 
 
 

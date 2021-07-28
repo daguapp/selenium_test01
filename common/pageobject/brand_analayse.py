@@ -18,13 +18,3 @@ class BrandPage(BasePage):
         self.input_key(self.search_input,content)
         sleep(2)
         self.click_ele(self.search_button)
-
-
-lista=[2,5,1,9,0,4,3]
-for i in range(1,len(lista)):
-    for x in range(0,len(lista)-i):
-        if lista[x]>lista[x+1]:
-            lista[x],lista[x+1]=lista[x+1],lista[x]
-        else:
-            pass
-print(lista)

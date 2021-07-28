@@ -12,16 +12,19 @@ class ShopAnalayse(BasePage):
     shop_search_btn=(By.XPATH,'//*[@id="content"]/div[2]/div[1]/div[2]/button')
     shop_detail_btn=(By.XPATH,'//*[@id="content"]/div[2]/div[2]/div/div/div/div/div/div/table/tbody/tr/td[1]/div/div[2]/div/a')
     shop_detail_cancel_btn=(By.XPATH,'//*[@id="content"]/div[2]/div[2]/div/div/div/div/div/div/table/tbody/tr/td[6]/button')
+    shop_txt=(By.XPATH,'//*[@id="content"]/div[2]/div[2]/div/div/div/div/div/div/table/tbody/tr/td[1]/div/div[2]/div/a/span')
 
-    def click_shop_analayse_btn(self,shopname):
+    def click_shop_analayse_btn(self,shop_id,shop_name):
         self.get_url("https://qbt.mobduos.com/#/dashboard")
         self.click_ele(*self.shop_analayse_btn)
         self.implicit_()
-        self.input_key(*self.shop_search_input,keys=shopname)
+        self.input_key(*self.shop_search_input,keys=shop_id)
         self.click_ele(*self.shop_search_btn)
         try:
-            shop_detail_cancel_btn =self.locate_element(*self.shop_detail_cancel_btn).click()
-            print("%s已找到该商品"%(shopname))
-
+            ele=self.locate_element(*self.shop_detail_cancel_btn).click()
         except:
-            print("%s不存在"%(shopname))
+            print("店铺ID:%s不存在"%(shop_id))
+        finally:
+            actual_res= self.locate_element(*self.shop_txt).text
+            print(actual_res)
+            assert actual_res == shop_name
