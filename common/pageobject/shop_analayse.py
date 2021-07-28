@@ -28,3 +28,5 @@ class ShopAnalayse(BasePage):
             actual_res= self.locate_element(*self.shop_txt).text
             print(actual_res)
             assert actual_res == shop_name
+
+#git推送代码超时，使用以下命令:git config --global --unset http.proxy
