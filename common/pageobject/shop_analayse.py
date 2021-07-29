@@ -22,11 +22,10 @@ class ShopAnalayse(BasePage):
         self.click_ele(*self.shop_search_btn)
         try:
             ele=self.locate_element(*self.shop_detail_cancel_btn).click()
+            actual_res= self.locate_element(*self.shop_txt).text
+            assert actual_res == shop_name
         except:
             print("该店铺不存在")
-        finally:
-            actual_res= self.locate_element(*self.shop_txt).text
-            print(actual_res)
-            assert actual_res == shop_name
+
 
 #git推送代码超时，使用以下命令:git config --global --unset http.proxy
