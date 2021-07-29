@@ -45,7 +45,7 @@ class TestFangZhou:
         ss.click_shop_analayse_btn(shop_id=shop_id,shop_name=shop_name)
 if __name__ == '__main__':
     pytest.main()
-    os.system("allure generate ./temp -o ./report --clean")
+    os.system("allure generate ./temp -o ./report --clean exit 0")
 
 #pytest [测试文件] -s -q --alluredir=./result --clean-alluredir
 
