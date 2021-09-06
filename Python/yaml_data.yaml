@@ -1,0 +1,11 @@
+个人信息: #对象类型常为字典、映射、哈希等，使用冒号结构表示key: value，冒号后面加空格
+  姓名: zhangsan #也可以使用key:{key1: value1,key2: value2}
+  性别: men #还可以使用缩进表示层级关系
+  年龄: 24
+  地址: china
+测试信息:
+ - 测试值 #-空格值用于数组，如列表
+ - 测试值1
+property:
+  port: 8080
+  path: /var/etc

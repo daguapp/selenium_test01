@@ -1,5 +1,5 @@
 import time
-
+import pytest
 from common.baseobject.base import BasePage
 from selenium import webdriver
 from selenium.webdriver.common.by import By
@@ -13,7 +13,7 @@ class ShopAnalayse(BasePage):
     shop_detail_btn=(By.XPATH,'//*[@id="content"]/div[2]/div[2]/div/div/div/div/div/div/table/tbody/tr/td[1]/div/div[2]/div/a')
     shop_detail_cancel_btn=(By.XPATH,'//*[@id="content"]/div[2]/div[2]/div/div/div/div/div/div/table/tbody/tr/td[6]/button')
     shop_txt=(By.XPATH,'//*[@id="content"]/div[2]/div[2]/div/div/div/div/div/div/table/tbody/tr/td[1]/div/div[2]/div/a/span')
-
+    @pytest.fixture(scope="module")
     def click_shop_analayse_btn(self,shop_id,shop_name):
         self.get_url("https://qbt.mobduos.com/#/dashboard")
         self.click_ele(*self.shop_analayse_btn)
