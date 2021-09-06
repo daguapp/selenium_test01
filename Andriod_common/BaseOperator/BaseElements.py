@@ -1,5 +1,4 @@
 from appium import webdriver
-from appium import webdriver
 class BaseElement:
     """Appium连接手机参数设置"""
     server = r'http://localhost:4723/wd/hub' #Appium server服务
