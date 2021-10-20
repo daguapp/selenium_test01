@@ -1,7 +1,7 @@
 from selenium.webdriver.support.wait import WebDriverWait
 import time
 import os
-
+from tqdm import tqdm
 from novels.inpuname import input_name
 from novels.dir_name import dir
 from selenium.webdriver.support import expected_conditions as EC
@@ -40,7 +40,7 @@ class GetNovels():
                 eles,driver=self.get_catalog(),self.driver
                 #循环遍历url获取网页内容
                 file=dir(self.novels_name)
-                for x in eles:
+                for x in tqdm(eles):
                     for y in x:
                         try:
                             time.sleep(4)

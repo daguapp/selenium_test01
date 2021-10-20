@@ -14,5 +14,20 @@ from selenium.webdriver.support.ui import  WebDriverWait
 # my_logger.addHandler(myhanlder)
 # #使用
 # my_logger.info("这是测试日志")
-test="print('字符串')"
-eval(test)
+
+class Test:
+
+    def __init__(self,name):
+        self.name=name
+        print("这是名字：%s"%(name))
+
+
+
+    def test01(self,age):
+        print("%s的年龄：%s"%(self.name,age))
+
+    def teardown_class(self):
+        print("这是teardownclass方法")
+
+t=Test("小明")
+t.test01(14)
