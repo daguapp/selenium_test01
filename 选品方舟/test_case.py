@@ -1,16 +1,17 @@
 import requests
 import pytest
-from get_data import *
+import logging
+from 选品方舟.get_data import GetData
 import re
-import base_requests
+import 选品方舟.base_requests
 class TestCase:
     """执行测试用例"""
+    @pytest.fixture(scope="function",)
     @pytest.mark.parametrize("path,sheet",[r"C:\Users\admin\Desktop\interface.xlsx","Sheet1"])
-    def setup_class(self,path,sheet):
+    def test_01(self,path,sheet):
         #获取导入的数据
         ob=GetData(path,sheet)
         data=ob.row_data()
-        global list_data
         list_data=[]
         for x in data:
             listb=[]
@@ -24,16 +25,18 @@ class TestCase:
                     listb.append(value)
             #拆分成每一行坐标为一组
             list_data.append(tuple(listb))
-
+        return list_data
     def test_request(self):
-        for i in (list_data[1:]):
+        listdata=self.test_01
+        print(listdata)
+        for i in (listdata[1:]):
             print(i)
 
 
 
 
 
-        print(list_data)
+
 
     def unpack_data(self):
         pass

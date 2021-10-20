@@ -1,5 +1,5 @@
 import requests
-from get_token import login
+from 选品方舟.get_token import login
 class SendRequest(login):
     """封装requests请求"""
 
